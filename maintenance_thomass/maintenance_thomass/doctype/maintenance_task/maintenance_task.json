@@ -1,0 +1,85 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-08-28 11:37:24.121746",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "service_item",
+  "description",
+  "frequency",
+  "uom",
+  "column_break_okfq",
+  "estimated_hours",
+  "rate_per_hour",
+  "total_cost"
+ ],
+ "fields": [
+  {
+   "fieldname": "service_item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Service Item",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Description"
+  },
+  {
+   "fieldname": "frequency",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Frequency",
+   "options": "\nWeekly\nMonthly\nQuarterly\nBi-Annually\nAnnually"
+  },
+  {
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "UOM",
+   "options": "UOM"
+  },
+  {
+   "fieldname": "column_break_okfq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "estimated_hours",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Estimated Hours"
+  },
+  {
+   "fieldname": "rate_per_hour",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Rate Per Hour"
+  },
+  {
+   "fieldname": "total_cost",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Cost",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-08-28 16:09:17.117640",
+ "modified_by": "Administrator",
+ "module": "maintenance thomass",
+ "name": "Maintenance Task",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

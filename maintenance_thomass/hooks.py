@@ -5,6 +5,19 @@ app_description = "task"
 app_email = "maintenance@gmail.com"
 app_license = "mit"
 
+fixtures = [
+    {"dt": "Workflow", "filters": [["document_type", "=", "Project Maintenance Contract"]]},
+    {"dt": "Role", "filters": [["role_name", "in", [
+        "Contract Approver",
+        "Contract Reviewer"
+    ]]
+    ]},
+    {"dt": "Workflow State", "filters": [["workflow_state_name", "in", [
+        "Draft",
+        "Under Review"
+    ]]]}
+]
+
 # Apps
 # ------------------
 

@@ -1,0 +1,63 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-08-28 11:48:07.212021",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "invoice_date",
+  "invoice_amount",
+  "invoice_status",
+  "column_break_urka",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "invoice_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Invoice Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "invoice_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Invoice Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "invoice_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Invoice Status",
+   "options": "Pending\nPaid\nOverdue",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_urka",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Remarks"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-08-28 16:10:10.435884",
+ "modified_by": "Administrator",
+ "module": "maintenance thomass",
+ "name": "Billing Schedule",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

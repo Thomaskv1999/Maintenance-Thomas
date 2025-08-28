@@ -1,0 +1,257 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{contract_title}-MC-{MM}{YY}-{###}",
+ "creation": "2025-08-28 11:25:32.426383",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_uzkj",
+  "amended_from",
+  "customer_name",
+  "customer_email",
+  "customer_contact_number",
+  "column_break_pkms",
+  "billing_address",
+  "site_address",
+  "contact_details_section",
+  "contract_title",
+  "contract_id",
+  "project",
+  "contract_type",
+  "contract_start_date",
+  "contract_end_date",
+  "duration",
+  "column_break_hqca",
+  "supervisor",
+  "reference_files",
+  "status",
+  "created_on",
+  "service_items_table_section",
+  "maintenance_task",
+  "billing_table_section",
+  "billing_schedule",
+  "section_break_dvur",
+  "total_estimated_hours",
+  "total_contract_value",
+  "column_break_hifh",
+  "total_invoiced_amount",
+  "pending_balance"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_uzkj",
+   "fieldtype": "Section Break",
+   "label": "Customer Section"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Project Maintenance Contract",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "customer_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Customer Name",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer_email",
+   "fieldtype": "Data",
+   "label": "Customer Email"
+  },
+  {
+   "fieldname": "customer_contact_number",
+   "fieldtype": "Data",
+   "label": "Customer Contact Number"
+  },
+  {
+   "fieldname": "billing_address",
+   "fieldtype": "Small Text",
+   "label": "Billing Address"
+  },
+  {
+   "fieldname": "column_break_pkms",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "site_address",
+   "fieldtype": "Small Text",
+   "label": "Site Address"
+  },
+  {
+   "fieldname": "contact_details_section",
+   "fieldtype": "Section Break",
+   "label": "Contact Details"
+  },
+  {
+   "fieldname": "contract_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Contract Title",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "contract_id",
+   "fieldtype": "Data",
+   "label": "Contract ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "contract_type",
+   "fieldtype": "Select",
+   "label": "Contract Type",
+   "options": "\nAnnual\nBi-Annual\nQuarterly\nMonthly",
+   "reqd": 1
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Int",
+   "label": "Duration",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_hqca",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "supervisor",
+   "fieldtype": "Link",
+   "label": "Supervisor",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reference_files",
+   "fieldtype": "Attach",
+   "label": "Reference Files"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nActive\nTerminated\nCompleted",
+   "read_only": 1
+  },
+  {
+   "fieldname": "service_items_table_section",
+   "fieldtype": "Section Break",
+   "label": "Service Items Table"
+  },
+  {
+   "fieldname": "maintenance_task",
+   "fieldtype": "Table",
+   "label": "Maintenance Task",
+   "options": "Maintenance Task"
+  },
+  {
+   "fieldname": "billing_table_section",
+   "fieldtype": "Section Break",
+   "label": "Billing Table"
+  },
+  {
+   "fieldname": "billing_schedule",
+   "fieldtype": "Table",
+   "label": "Billing Schedule",
+   "options": "Billing Schedule"
+  },
+  {
+   "fieldname": "section_break_dvur",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_estimated_hours",
+   "fieldtype": "Float",
+   "label": "Total Estimated Hours",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_contract_value",
+   "fieldtype": "Currency",
+   "label": "Total Contract Value",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_hifh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_invoiced_amount",
+   "fieldtype": "Currency",
+   "label": "Total Invoiced Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "pending_balance",
+   "fieldtype": "Currency",
+   "label": "Pending Balance",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "created_on",
+   "fieldtype": "Date",
+   "label": "Created On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "contract_start_date",
+   "fieldtype": "Date",
+   "label": "Contract Start Date"
+  },
+  {
+   "fieldname": "contract_end_date",
+   "fieldtype": "Date",
+   "label": "Contract End Date"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Project",
+   "options": "Project"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-08-28 22:52:32.677654",
+ "modified_by": "Administrator",
+ "module": "maintenance thomass",
+ "name": "Project Maintenance Contract",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
