@@ -3,6 +3,7 @@
 
 import frappe
 from frappe.model.document import Document
+from frappe.utils import flt
 
 @frappe.whitelist()
 def get_customer(customer):
@@ -83,8 +84,7 @@ class ProjectMaintenanceContract(Document):
 		if self.contract_title and not self.contract_id:
 			self.contract_id = contract_id(self.contract_title)
 
-		if self.total_invoiced_amount > self.total_contract_value:
+		if flt(self.total_invoiced_amount) > flt(self.total_contract_value):
 			frappe.throw("Invoiced amount exceeded total contract value")
 
 
-			
