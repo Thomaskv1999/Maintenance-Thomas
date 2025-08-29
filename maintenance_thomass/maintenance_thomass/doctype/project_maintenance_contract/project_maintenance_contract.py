@@ -82,3 +82,6 @@ class ProjectMaintenanceContract(Document):
 
 		if self.contract_title and not self.contract_id:
 			self.contract_id = contract_id(self.contract_title)
+
+		if self.total_invoiced_amount > self.total_contract_value:
+			frappe.throw("Invoiced amount exceeded total contract value")
