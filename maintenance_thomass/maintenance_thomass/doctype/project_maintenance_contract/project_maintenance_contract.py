@@ -6,7 +6,7 @@ from frappe.model.document import Document
 
 @frappe.whitelist()
 def get_customer(customer):
-	addresses = frappe.get_all("Address", fields=["name", "email_id","address_line1"],order_by="creation desc")
+	addresses = frappe.get_all("Address", fields=["name", "email_id","phone","address_line1"],filters={"address_type": "Billing"},order_by="creation desc")
 
 	for addr in addresses:
 		addr_doc = frappe.get_doc("Address", addr.name)
