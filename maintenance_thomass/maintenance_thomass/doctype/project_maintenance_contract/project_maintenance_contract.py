@@ -6,25 +6,40 @@ from frappe.model.document import Document
 
 @frappe.whitelist()
 def get_customer(customer):
-	addresses = frappe.get_all("Address", fields=["name", "email_id","phone","address_line1"],filters={"address_type": "Billing"},order_by="creation desc")
+    addresses = frappe.get_all(
+        "Address",
+        fields=["name"],
+        filters={"address_type": "Billing"},
+        order_by="creation desc"
+    )
 
-	for addr in addresses:
-		addr_doc = frappe.get_doc("Address", addr.name)
+    for addr in addresses:
+        addr_doc = frappe.get_doc("Address", addr.name)
 
-		for link in addr_doc.links:
-			if link.link_doctype == "Customer" and link.link_name == customer:
-				return {
-					"email": addr_doc.email_id,
-					"phone": addr_doc.phone,
-					"address":addr_doc.address_line1
-				}
+        for link in addr_doc.links:
+            if link.link_doctype == "Customer" and link.link_name == customer:
+            
+                full_address = "\n".join(filter(None, [
+                    addr_doc.address_line1,
+                    addr_doc.address_line2,
+                    addr_doc.city,
+                    addr_doc.state,
+                    addr_doc.pincode,
+                    addr_doc.country
+                ]))
 
-	return {
-		"email": None,
-		"phone": None,
-		"address":None
+                return {
+                    "email": addr_doc.email_id,
+                    "phone": addr_doc.phone,
+                    "address": full_address
+                }
 
-	}
+    return {
+        "email": None,
+        "phone": None,
+        "address": None
+    }
+
 @frappe.whitelist()
 def contract_id(title=None):
 
