@@ -85,3 +85,6 @@ class ProjectMaintenanceContract(Document):
 
 		if self.total_invoiced_amount > self.total_contract_value:
 			frappe.throw("Invoiced amount exceeded total contract value")
+
+
+			
