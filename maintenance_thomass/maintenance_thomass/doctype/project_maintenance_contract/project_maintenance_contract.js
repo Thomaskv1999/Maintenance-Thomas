@@ -198,7 +198,7 @@ function date_diff(frm) {
             frm.set_value("contract_end_date", "")
             frm.set_value("duration", 0)
         } else {
-            frm.set_value("duration", diff)
+            frm.set_value("duration", diff+1)
         }
     }
 }

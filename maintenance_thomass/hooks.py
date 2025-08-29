@@ -15,7 +15,9 @@ fixtures = [
     {"dt": "Workflow State", "filters": [["workflow_state_name", "in", [
         "Draft",
         "Under Review"
-    ]]]}
+    ]]]},
+    {"dt": "Workflow Action Master", "filters": [["workflow_action_name", "in", ["Review"]]]},
+
 ]
 
 # Apps
